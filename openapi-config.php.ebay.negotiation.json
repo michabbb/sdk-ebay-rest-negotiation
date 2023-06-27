@@ -1,0 +1,14 @@
+{
+  "packageName": "sdk-ebay-rest-negotiation",
+  "composerVendorName": "macropage",
+  "composerProjectName": "sdk-ebay-rest-negotiation",
+  "artifactVersion": "1.9.0",
+  "invokerPackage": "macropage\\SDKs\\ebay\\rest\\negotiation",
+  "modelPackage": "Model",
+  "apiPackage": "API",
+  "variableNamingConvention": "camelCase",
+  "srcBasePath": "src",
+  "gitUserId": "macropage",
+  "gitRepoId": "sdk-ebay-rest-negotiation",
+  "validateSpec": false
+}
