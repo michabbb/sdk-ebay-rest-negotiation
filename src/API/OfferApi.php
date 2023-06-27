@@ -155,9 +155,9 @@ class OfferApi
      * @throws \InvalidArgumentException
      * @return array of \macropage\SDKs\ebay\rest\negotiation\Model\PagedEligibleItemCollection, HTTP status code, HTTP response headers (array of strings)
      */
-    public function findEligibleItemsWithHttpInfo($xEBAYCMARKETPLACEID, $limit = null, $offset = null, string $contentType = self::contentTypes['findEligibleItems'][0])
+    public function findEligibleItemsWithHttpInfo($xEBAYCMARKETPLACEID, $limit = null, $offset = null, string $contentTypeType = self::contentTypes['findEligibleItems'][0])
     {
-        $request = $this->findEligibleItemsRequest($xEBAYCMARKETPLACEID, $limit, $offset, $contentType);
+        $request = $this->findEligibleItemsRequest($xEBAYCMARKETPLACEID, $limit, $offset, $contentTypeType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -442,9 +442,9 @@ class OfferApi
      * @throws \InvalidArgumentException
      * @return \macropage\SDKs\ebay\rest\negotiation\Model\SendOfferToInterestedBuyersCollectionResponse
      */
-    public function sendOfferToInterestedBuyers($xEBAYCMARKETPLACEID, $contentType, $createOffersRequest = null, string $contentType = self::contentTypes['sendOfferToInterestedBuyers'][0])
+    public function sendOfferToInterestedBuyers($xEBAYCMARKETPLACEID, $createOffersRequest = null, string $contentType = self::contentTypes['sendOfferToInterestedBuyers'][0])
     {
-        list($response) = $this->sendOfferToInterestedBuyersWithHttpInfo($xEBAYCMARKETPLACEID, $contentType, $createOffersRequest, $contentType);
+        list($response) = $this->sendOfferToInterestedBuyersWithHttpInfo($xEBAYCMARKETPLACEID, $createOffersRequest, $contentType);
         return $response;
     }
 
@@ -460,9 +460,9 @@ class OfferApi
      * @throws \InvalidArgumentException
      * @return array of \macropage\SDKs\ebay\rest\negotiation\Model\SendOfferToInterestedBuyersCollectionResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function sendOfferToInterestedBuyersWithHttpInfo($xEBAYCMARKETPLACEID, $contentType, $createOffersRequest = null, string $contentType = self::contentTypes['sendOfferToInterestedBuyers'][0])
+    public function sendOfferToInterestedBuyersWithHttpInfo($xEBAYCMARKETPLACEID, $createOffersRequest = null, string $contentType = self::contentTypes['sendOfferToInterestedBuyers'][0])
     {
-        $request = $this->sendOfferToInterestedBuyersRequest($xEBAYCMARKETPLACEID, $contentType, $createOffersRequest, $contentType);
+        $request = $this->sendOfferToInterestedBuyersRequest($xEBAYCMARKETPLACEID, $createOffersRequest, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -559,9 +559,9 @@ class OfferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function sendOfferToInterestedBuyersAsync($xEBAYCMARKETPLACEID, $contentType, $createOffersRequest = null, string $contentType = self::contentTypes['sendOfferToInterestedBuyers'][0])
+    public function sendOfferToInterestedBuyersAsync($xEBAYCMARKETPLACEID, $createOffersRequest = null, string $contentType = self::contentTypes['sendOfferToInterestedBuyers'][0])
     {
-        return $this->sendOfferToInterestedBuyersAsyncWithHttpInfo($xEBAYCMARKETPLACEID, $contentType, $createOffersRequest, $contentType)
+        return $this->sendOfferToInterestedBuyersAsyncWithHttpInfo($xEBAYCMARKETPLACEID, $createOffersRequest, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -580,10 +580,10 @@ class OfferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function sendOfferToInterestedBuyersAsyncWithHttpInfo($xEBAYCMARKETPLACEID, $contentType, $createOffersRequest = null, string $contentType = self::contentTypes['sendOfferToInterestedBuyers'][0])
+    public function sendOfferToInterestedBuyersAsyncWithHttpInfo($xEBAYCMARKETPLACEID, $createOffersRequest = null, string $contentType = self::contentTypes['sendOfferToInterestedBuyers'][0])
     {
         $returnType = '\macropage\SDKs\ebay\rest\negotiation\Model\SendOfferToInterestedBuyersCollectionResponse';
-        $request = $this->sendOfferToInterestedBuyersRequest($xEBAYCMARKETPLACEID, $contentType, $createOffersRequest, $contentType);
+        $request = $this->sendOfferToInterestedBuyersRequest($xEBAYCMARKETPLACEID, $createOffersRequest, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -632,7 +632,7 @@ class OfferApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function sendOfferToInterestedBuyersRequest($xEBAYCMARKETPLACEID, $contentType, $createOffersRequest = null, string $contentType = self::contentTypes['sendOfferToInterestedBuyers'][0])
+    public function sendOfferToInterestedBuyersRequest($xEBAYCMARKETPLACEID, $createOffersRequest = null, string $contentType = self::contentTypes['sendOfferToInterestedBuyers'][0])
     {
 
         // verify the required parameter 'xEBAYCMARKETPLACEID' is set
